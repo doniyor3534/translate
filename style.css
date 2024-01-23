@@ -1,0 +1,139 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper{
+    max-width: 450px;
+    width: 100% ;
+    height:100vh ;
+    background: linear-gradient(rgb(10, 21, 39),rgba(4, 10, 20, 0.866));
+}
+
+.navbar{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.navbtn{
+    width: 20px;
+    height: 3px;
+    background-color: white;
+    border: none;
+    position: relative;
+}
+.navbtn.active{
+    background-color: transparent;
+}
+.navbtn::after{
+    position: absolute;
+    top: -7px;
+    left:0;
+    width: 20px;
+    height: 3px;
+    background-color: white;
+    content: "";
+    transition: all 0.3s linear;
+}
+.navbtn.active::after{
+    transform: rotate(40deg);
+    top:0px ;
+}
+.navbtn::before{
+    position: absolute;
+    bottom: -7px;
+    left:0;
+    width: 20px;
+    height: 3px;
+    background-color: white;
+    content: "";
+    transition: all 0.3s linear;
+}
+.navbtn.active::before{
+    transform: rotate(-40deg);
+    top:0px ;
+}
+.logo{
+    color: white;
+    font-size: 30px;
+}
+
+
+.container{
+    width: 95%;
+    height:90vh;
+    background-color: rgb(227, 227, 230);
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+.container .head{
+    height: 10%;
+    padding:25px 10px;
+    text-align: center;
+    font-size: 25px;
+    color: rgb(77, 76, 76);
+}
+.spanText{
+    background-color: aliceblue;
+    padding: 4px 7px;
+    border-radius: 10px;
+}
+.spanBtn{
+    padding:3px 10px;
+    border: 0.5px solid grey;
+    border-radius: 10px;
+}
+.container .body{
+    height: 90%;
+    overflow-y: scroll;
+    /* background-color: aliceblue; */
+}
+.inputGroup{
+    width: 80%;
+    height: 40px;
+    margin: 0 auto;
+    background-color: aliceblue;
+    display: flex;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 0 10px ;
+}
+.inputGroup .searchInput{
+    width: 90%;
+    height: 100%;
+    border: none;
+    padding: 0px 5px;
+    background-color: transparent;
+    font-size: 20px;
+    outline: none;
+}
+.inputGroup .searchBtn {
+    width: 10%;
+    height: 100%;
+    border: none;
+    padding: 0px 5px;
+    background-color: transparent;
+}
+.cardText{
+    padding:30px 20px;
+}
+.cardText h4{
+    padding:10px 5px;
+    background-color: aliceblue;
+    margin: 1px 0px;
+    border-radius: 5px;
+}
